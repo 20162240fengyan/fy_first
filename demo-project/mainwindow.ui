@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="MyWidget" name="widget" native="true"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QTreeView" name="treeView"/>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QTableWidget" name="tableWidget">
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>列1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>列2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>列3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>列4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>列5</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="2" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnChange">
+        <property name="text">
+         <string>将小于等于25的数置0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="text">
+         <string>保留单行数字</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>倒序显示</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+    <item row="2" column="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>tcp：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSendTcpData">
+        <property name="text">
+         <string>发送tcp数据</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="btnSelect">
+      <property name="text">
+       <string>选择“hello.txt”的路径</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>设置</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actOpen"/>
+   <addaction name="actNew"/>
+   <addaction name="actSave"/>
+   <addaction name="actUndo"/>
+   <addaction name="actCut"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>打开新页面</string>
+   </property>
+  </action>
+  <action name="actOpen">
+   <property name="icon">
+    <iconset theme="://Image/open.png" resource="resource.qrc">
+     <normaloff>:/Image/open.png</normaloff>:/Image/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actNew">
+   <property name="icon">
+    <iconset theme="://Image/new.png" resource="resource.qrc">
+     <normaloff>:/Image/new.png</normaloff>:/Image/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建</string>
+   </property>
+   <property name="toolTip">
+    <string>新建</string>
+   </property>
+  </action>
+  <action name="actSave">
+   <property name="icon">
+    <iconset theme="://Image/save.png" resource="resource.qrc">
+     <normaloff>:/Image/save.png</normaloff>:/Image/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actUndo">
+   <property name="icon">
+    <iconset theme="://Image/edit_undo.png" resource="resource.qrc">
+     <normaloff>:/Image/edit_undo.png</normaloff>:/Image/edit_undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤回</string>
+   </property>
+   <property name="toolTip">
+    <string>撤回</string>
+   </property>
+  </action>
+  <action name="actCut">
+   <property name="icon">
+    <iconset theme="://Image/cut.png" resource="resource.qrc">
+     <normaloff>:/Image/cut.png</normaloff>:/Image/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切</string>
+   </property>
+   <property name="toolTip">
+    <string>剪切</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyWidget</class>
+   <extends>QWidget</extends>
+   <header>mywidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
